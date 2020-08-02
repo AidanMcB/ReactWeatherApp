@@ -1,15 +1,17 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-export default function LandinPage(props){
+export default function LandinPage(props) {
 
     const [zip, setZip] = useState('')
 
-    return(
+    return (
         // console.log(props.handleSubmit),
-        <form onSubmit={(e) => props.handleSubmit(e,zip)}>
-        <label>Enter Your Zip Code: </label>
-        <input onChange={(e) => setZip(e.target.value)}></input>
-        <button type="submit">Enter</button>
+        <form onSubmit={(e) => props.handleSubmit(e, zip)}>
+            <div class="form-group" >
+                <label>Enter Your Zip Code: </label>
+                <input onChange={(e) => setZip(e.target.value)}></input>
+                <button type="submit">Enter</button>
+            </div>
         </form>
     )
 }

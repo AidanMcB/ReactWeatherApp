@@ -7,6 +7,7 @@ import WeatherPage from './components/WeatherPage'
 
 function App() {
 
+  const [show, setShow] = useState(false)
   const [weather, setWeather] = useState({
     //farenheit
     temperature: '',
@@ -38,6 +39,9 @@ function App() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&units=imperial&appid=${apiKey}`)
       .then(resp => resp.json())
       .then(weather => {
+        console.log(weather.cod)
+        if(weather.cod !== "404"){
+        setShow(false)
         setWeather({
             //farenheit
             city: weather.name,
@@ -55,10 +59,12 @@ function App() {
             main: weather.weather[0].main,
             description: weather.weather[0].description
         })
+      }
       })
+    
     }else{
       console.log("invalid input")
-
+      setShow(true)
       }
   }
 
@@ -66,6 +72,8 @@ function App() {
     <div className="App">
       Weather App
       <LandinPage handleSubmit={handleSubmit} />
+      {show ? 
+        <div class="alert alert-danger" role="alert">Please Enter a 5 Digit Numeric Zip Code</div> : null }
       {weather.city !== "" ? <WeatherPage weather={weather} /> : null }
     </div>
   );

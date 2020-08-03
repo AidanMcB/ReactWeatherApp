@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../App.css';
 
 export default function LandinPage(props) {
 
@@ -8,7 +9,10 @@ export default function LandinPage(props) {
         // console.log(props.handleSubmit),
         <form onSubmit={(e) => props.handleSubmit(e, zip)}>
             <div class="form-group" >
-                <label>Enter Your Zip Code: </label>
+                <label style={{
+                    marginTop:"30px",
+                    fontWeight:"800",
+                }}>Enter Your Zip Code: </label>
                 <input onChange={(e) => setZip(e.target.value)}></input>
                 <button type="submit">Enter</button>
             </div>

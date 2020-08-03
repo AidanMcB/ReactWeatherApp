@@ -4,6 +4,8 @@ import './App.css';
 //Components
 import LandinPage from './components/LandinPage'
 import WeatherPage from './components/WeatherPage'
+//Images
+import BGimage from './images/jeremy-thomas.jpg'
 
 function App() {
 
@@ -45,9 +47,9 @@ function App() {
         setWeather({
             //farenheit
             city: weather.name,
-            temperature: weather.main.temp,
+            temperature: Math.round(weather.main.temp * 10) / 10,
             humidity: weather.main.humidity,
-            feelsLike: weather.main.feels_like,
+            feelsLike: Math.round(weather.main.feels_like * 10) /10,
             windSpeed: weather.wind.speed,
             windDirection: weather.wind.deg,
             //in milliseconds
@@ -65,15 +67,28 @@ function App() {
     }else{
       console.log("invalid input")
       setShow(true)
+      setWeather({city:""})
       }
   }
 
   return (
     <div className="App">
-      Weather App
+    <div class="heading" >
+    <br/>
+      <h1 style={{
+        fontSize:"48px",
+        color:"white",
+        textShadow:"1px 1px black",
+        backgroundColor: "rgba(0,0,0,0.10)",
+        borderRadius:"25px",
+        width:"40%",
+        margin:"auto",
+        border:"1px solid black"
+      }}>Weather App</h1>
+      </div>
       <LandinPage handleSubmit={handleSubmit} />
       {show ? 
-        <div class="alert alert-danger" role="alert">Please Enter a 5 Digit Numeric Zip Code</div> : null }
+        <div style={{display:"inline-block", borderRadius:"25px"}} class="alert alert-danger" role="alert">Please Enter a 5 Digit Numeric Zip Code!</div> : null }
       {weather.city !== "" ? <WeatherPage weather={weather} /> : null }
     </div>
   );

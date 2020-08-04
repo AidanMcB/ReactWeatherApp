@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../App.css';
+import '../Outline.css';
 
 export default function LandinPage(props) {
 
@@ -22,7 +23,8 @@ export default function LandinPage(props) {
                     borderBottomStyle: "groove",
                     backgroundColor: "#eee",
                     borderRadius: "25px",
-                    margin: "10px"
+                    margin: "10px",
+                    inputFocus:"none"
                 }}
                     onChange={(e) => setZip(e.target.value)}></input>
                 <button style={{

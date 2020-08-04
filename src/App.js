@@ -5,6 +5,7 @@ import './App.css';
 import LandinPage from './components/LandinPage'
 import WeatherPage from './components/WeatherPage'
 import Watch from './components/Watch'
+import WatchClass from './components/WatchClass'
 //Images
 import BGimage from './images/jeremy-thomas.jpg'
 
@@ -87,7 +88,8 @@ function App() {
         }}>Weather App</h1>
       </div>
       <LandinPage handleSubmit={handleSubmit} />
-      <Watch />
+      <WatchClass />
+      {/* <Watch /> */}
       {show ?
         <div style={{ display: "inline-block", borderRadius: "25px" }} class="alert alert-danger" role="alert">Please Enter a 5 Digit Numeric Zip Code!</div> : null}
       {weather.city !== "" ? <WeatherPage weather={weather} /> : null}

@@ -1,0 +1,30 @@
+*** Finish Styling the Weather Data ***
+    **This Includes ... **
+    -- aligning columns in a div with a translucent background 
+        => white board out the attributes of the data :
+    <div
+    class="d-flex justify-content-around">
+        <div 
+        style={{marginTop:"40px"}}
+        class="d-flex justify-content-around">
+            -City,
+            -Temp,
+            -Humidity,
+            -Feels Like,
+        </div>
+        <div
+        style={{marginTop:"40px"}} 
+        class="d-flex justify-content-around">
+            -Skies,               
+            -Wind Speed,
+            -Sunrise,
+            -Sunset
+        </div>
+    </div>
+    -- Fix the outline of the input box in the main page 
+        => consider the hover property ?
+
+*** Ensure API requests produce propper ressponses + errors ***
+*** Add a local time/ watch ***
+*** Deploy on Heroku ***
+*** Post to Linkedin ***

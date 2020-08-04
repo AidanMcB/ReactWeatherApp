@@ -10,12 +10,25 @@ export default function LandinPage(props) {
         <form onSubmit={(e) => props.handleSubmit(e, zip)}>
             <div class="form-group" >
                 <label style={{
-                    marginTop:"30px",
-                    fontWeight:"800",
-                }}>Enter Your Zip Code: </label>
-                <input onChange={(e) => setZip(e.target.value)}></input>
-                <button type="submit">Enter</button>
+                    marginTop: "50px",
+                    fontWeight: "800",
+                    color:"white",
+                    textShadow: "1px 1px black",
+                }}> Enter Your Zip Code: </label>
+                <input style={{
+                    borderTopStyle: "hidden",
+                    borderRightStyle: "hidden",
+                    borderLeftStyle: "hidden",
+                    borderBottomStyle: "groove",
+                    backgroundColor: "#eee",
+                    borderRadius: "25px",
+                    margin: "10px"
+                }}
+                    onChange={(e) => setZip(e.target.value)}></input>
+                <button style={{
+                    borderRadius: "25px"
+                }} type="submit" class="btn btn-primary">Enter</button>
             </div>
-        </form>
+        </form >
     )
 }

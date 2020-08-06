@@ -63,7 +63,7 @@ export default function WeatherPage(props) {
                 <div
                   style={{marginTop:"20%", marginBottom:"20%" }}>
                     <h4><span class="badge badge-pill badge-primary">Skies</span></h4>
-                    <h2><p>{weather.main}, {weather.description}</p></h2>
+                    <h2><p>{weather.main},<br /> {weather.description}</p></h2>
                 </div>
                 <div>
                     <h4><span class="badge badge-pill badge-primary">Wind Speed</span></h4>

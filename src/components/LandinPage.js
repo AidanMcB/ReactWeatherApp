@@ -7,7 +7,6 @@ export default function LandinPage(props) {
     const [zip, setZip] = useState('')
 
     return (
-        // console.log(props.handleSubmit),
         <form onSubmit={(e) => props.handleSubmit(e, zip)}>
             <div class="form-group" >
                 <label style={{

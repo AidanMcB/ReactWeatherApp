@@ -89,7 +89,6 @@ function App() {
       </div>
       <LandinPage handleSubmit={handleSubmit} />
       <WatchClass />
-      {/* <Watch /> */}
       {show ?
         <div style={{ display: "inline-block", borderRadius: "25px" }} class="alert alert-danger" role="alert">Please Enter a 5 Digit Numeric Zip Code!</div> : null}
       {weather.city !== "" ? <WeatherPage weather={weather} /> : null}

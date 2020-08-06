@@ -4,10 +4,7 @@ import './App.css';
 //Components
 import LandinPage from './components/LandinPage'
 import WeatherPage from './components/WeatherPage'
-import Watch from './components/Watch'
 import WatchClass from './components/WatchClass'
-//Images
-import BGimage from './images/jeremy-thomas.jpg'
 
 function App() {
 

@@ -16,7 +16,14 @@ body, html {
   background-size: cover;
   background-repeat: none;
   height: 100%
+  
 }
+/* body {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

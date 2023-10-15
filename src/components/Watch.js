@@ -8,11 +8,10 @@ export default function Watch() {
         setTime({time: new Date().toLocaleTimeString})
     }, [] )
     return(
-        console.log(time),
-        <div class="float-right-top" style={{position:"absolute", right:"0", top:"0", marginRight:"10px"}}> 
-        <h3
-        style={{color:"White", textShadow:"1px 1px black"}}>
-        {}</h3>
+        <div className="float-right-top" style={{position:"absolute", right:"0", top:"0", marginRight:"10px"}}> 
+            <h3 style={{color:"White", textShadow:"1px 1px black"}}>
+                {}
+            </h3>
         </div>
-    )
-}
+    );
+};

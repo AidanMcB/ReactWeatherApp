@@ -35,7 +35,8 @@ function App() {
         description: '',
         city: ''
     });
-
+    
+    /* eslint-disable react-hooks/exhaustive-deps */
     React.useEffect(() => {
         init();
     }, []);

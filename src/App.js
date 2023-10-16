@@ -10,7 +10,7 @@ function App() {
 
     const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
     const ip2LocationApiKey = process.env.REACT_APP_IP2_LOCATION_API_KEY;
-    const isLocalOrDev = process.env.NODE_ENV || 'development';
+    const isLocalOrDev = process.env.NODE_ENV == 'development';
     const localTestIP = process.env.REACT_APP_LOCAL_TEST_IP;
     const defaultZipCodeNYC = '10001';
 
@@ -35,7 +35,7 @@ function App() {
         description: '',
         city: ''
     });
-    
+
     /* eslint-disable react-hooks/exhaustive-deps */
     React.useEffect(() => {
         init();

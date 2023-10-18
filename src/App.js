@@ -9,9 +9,6 @@ import WatchClass from './components/WatchClass';
 function App() {
 
     const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
-    const ip2LocationApiKey = process.env.REACT_APP_IP2_LOCATION_API_KEY;
-    const isLocalOrDev = process.env.NODE_ENV === 'development';
-    const localTestIP = process.env.REACT_APP_LOCAL_TEST_IP;
     const defaultZipCodeNYC = '10001';
 
     console.log('Env: ', process.env.NODE_ENV);
@@ -42,51 +39,10 @@ function App() {
     }, []);
 
     async function init() {
-        let ip;
-        if (isLocalOrDev) {
-            ip = localTestIP;
-        } else {
-            ip = await getUserIp();
-        }
-        const localData = await getDataFromIp(ip);
-        let zip = localData?.zip_code || defaultZipCodeNYC;
-        const weather = await getWeatherByZipCode(zip);
+        const weather = await getWeatherByZipCode(defaultZipCodeNYC);
         if (weather) {
             parseWeatherDataToState(weather);
         }
-    }
-
-    async function getUserIp() {
-        return fetch('https://geolocation-db.com/json/')
-            .then(resp => resp.json())
-            .then(response => response.IPv4)
-            .catch((err) => {
-                console.error("Failed to get the user's IP address. Error Message: ", err)
-            });
-    }
-
-    async function getDataFromIp(ipAddress) {
-        return fetch(`https://api.ip2location.io/?key=${ip2LocationApiKey}&ip=${ipAddress}`)
-            .then(resp => resp.json())
-            .then(response => response)
-            // Returns:   
-            // {     
-            //      "ip": string Ex: 99.999.999.999
-            //      "country_code": string Ex: "US"
-            //      "country_name": string Ex: "United States of America",
-            //      "region_name": string Ex: "North Carolina",
-            //      "city_name": string Ex: "Rahway",
-            //      "latitude": numner Ex: 40.60821,
-            //      "longitude": number Ex: -74.27755,
-            //      "zip_code": string Ex: "12345",
-            //      "time_zone": string Ex: "-04:00",
-            //      "asn": string Ex: "9999",
-            //      "as": string Ex: "Comcast Cable Communications LLC",
-            //      "is_proxy": boolean Ex: false
-            //  }
-            .catch((err) => {
-                console.error('Failed to get Browser Data from IP address. Error Message: ', err);
-            });
     }
 
     async function getWeatherByZipCode(zipCode) {

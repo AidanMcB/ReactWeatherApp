@@ -1,5 +1,4 @@
 import React from 'react';
-import '../App.css';
 
 export default function WeatherPage(props) {
 
@@ -25,58 +24,43 @@ export default function WeatherPage(props) {
         return timestr
     };
 
+    // dt_txt
+
 
     return (
-        <div style={{ backgroundRepeat: "cover", height: "100%",
-            color:"white",
-            marginLeft:"30px",
-            marginRight:"30px",
-            textShadow:"1px 1px black" }}
-        >
-            <div 
-                className="d-flex justify-content-around"
-                style={{
-                    background:"rgba(0,0,0,0.10)",
-                    borderRadius:"45px"
-                }}
-            >
-                <div style={{margin:"20px"}} className="flex-column align-items-center">
-                    <div>
-                        <h4><span className="badge badge-pill badge-primary">City</span></h4>
-                        <h2><p>{weather.city}</p></h2>
-                    </div>
-                    <div style={{marginTop:"20%", marginBottom:"20%" }}>
-                        <h4><span className="badge badge-pill badge-primary">Temperature</span></h4>
-                        <h2><p>{weather.temperature + " " + String.fromCharCode(176) + "F"}</p></h2>
-                    </div>
-                    <div>
-                        <h4><span className="badge badge-pill badge-primary">Humidity</span></h4>
-                        <h2><p>{weather.humidity} %</p></h2>
-                    </div>
+        <div className="weather-info-wrapper">
+            <div className="weather-details-grid">
+                <div className="grid-cell">
+                    <span className="grid-cell--label">City</span>
+                    <span className="grid-cell--info">{weather.city}</span>
                 </div>
-                <div style={{margin:"20px"}} className="flex-column justify-content-around">
-                <div>
-                    <h4><span className="badge badge-pill badge-primary">Feels Like</span></h4>
-                    <h2><p>{weather.feelsLike + " " + String.fromCharCode(176) + "F"}</p></h2>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Temperature</span>
+                    <span className="grid-cell--info">{weather.temperature + " " + String.fromCharCode(176) + "F"}</span>
                 </div>
-                <div style={{marginTop:"20%", marginBottom:"20%" }}>
-                    <h4><span className="badge badge-pill badge-primary">Skies</span></h4>
-                    <h2><p>{weather.main},<br /> {weather.description}</p></h2>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Humidity</span>
+                    <span className="grid-cell--info">{weather.humidity} %</span>
+                </div>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Feels Like</span>
+                    <span className="grid-cell--info">{weather.feelsLike + " " + String.fromCharCode(176) + "F"}</span>
+                </div>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Skies</span>
+                    <span className="grid-cell--info">{weather.main},<br /> {weather.description}</span>
+                </div>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Wind Speed</span>
+                    <span className="grid-cell--info">{weather.windSpeed} mi/h </span>
                 </div>
                 <div>
-                    <h4><span className="badge badge-pill badge-primary">Wind Speed</span></h4>
-                    <h2><p>{weather.windSpeed} mi/h </p></h2>
+                    <span className="grid-cell--label">Sunrise</span>
+                    <span className="grid-cell--info">&emsp;{timeConverter(weather.sunrise)}</span>
                 </div>
-                </div>
-                <div style={{margin:"20px"}} className="flex-column justify-content-around" >
-                    <div>
-                        <h4><span className="badge badge-pill badge-primary">Sunrise</span></h4>
-                        <h2><p>&emsp;{timeConverter(weather.sunrise)}</p></h2>
-                    </div>
-                    <div style={{marginTop:"20%"}}>
-                        <h4><span className="badge badge-pill badge-primary">Sunset</span></h4>
-                        <h2><p>&emsp;{timeConverter(weather.sunset)}</p></h2>
-                    </div>
+                <div className="grid-cell">
+                    <span className="grid-cell--label">Sunset</span>
+                    <span className="grid-cell--info">&emsp;{timeConverter(weather.sunset)}</span>
                 </div>
             </div>
         </div>

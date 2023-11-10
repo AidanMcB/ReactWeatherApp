@@ -1,0 +1,86 @@
+.weather-modal-wrapper:not(.active) {
+    position: absolute;
+    bottom: 100vh;
+}
+
+.weather-modal-wrapper.active {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    transition: 3s;
+}
+
+.weather-modal-wrapper:not(.active) .weather-modal {
+    opacity: 0;
+}
+
+.weather-modal {
+    background-color: var(--lavender-main-1);
+    outline: 1px solid var(--purple-main-1);
+    border-radius: 20px;
+    padding: 2em;
+    font-size: 1.2em;
+    position: relative;
+    opacity: 1;
+    transition: 1s;
+    width: 60vw;
+}
+
+.modal--close-button {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    font-size: 18px;
+}
+
+.modal--close-button:hover {
+    font-weight: 700;    
+    transform: scale(1.05);
+}
+
+.modal--active-day {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.modal--grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+}
+
+.modal--grid-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 0 .5em;
+}
+
+.modal--main {
+    display: flex;
+    justify-content: center;
+}
+
+.modal--temp {
+    color: var(--rose-main-1);
+    font-size: 3em;
+}
+
+.modal--temp label {
+    font-size: .8em;
+}
+
+.modal--weather-description {
+    border-bottom: none;
+}

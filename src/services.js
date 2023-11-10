@@ -38,7 +38,7 @@ export async function _getWeatherByZipCode(zipCode) {
 };
 
 export async function _getCoordinatesByZipAndCountry(zip, countryCode) {
-    return fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zip},${countryCode}&appid=${weatherApiKey}`)
+    return fetch(`https://api.openweathermap.org/geo/1.0/zip?zip=${zip},${countryCode}&appid=${weatherApiKey}`)
         .then(resp => resp.json())
         .then(response => response)
         .catch((err) => {

@@ -1,0 +1,18 @@
+.current-day-wrapper {
+    text-align: center;
+}
+
+.city {
+    margin: 0;
+    font-size: 2em;
+}
+
+.temperature {
+    margin: 0;
+    color: var(--rose-main-1);
+    font-size: 4em;
+}
+
+.today {
+    font-weight: 700;
+}

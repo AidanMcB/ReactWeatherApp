@@ -1,0 +1,111 @@
+.top-bar {
+    height: 48px;
+    background-color: rgba(0,0,0,0.20);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    margin-left: auto;
+}
+
+.search-button:hover {
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+svg {
+    height: 20px;
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+/* From Section */
+.zip-form {
+    width: 100%;
+    position: relative;
+}
+
+.zip-form--content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px 0 12px;
+    transition: ease-in-out 1s;
+}
+
+.top-bar.showing .zip-form--content { 
+    opacity: 1;
+}
+
+.top-bar.hidden .zip-form--content {
+    pointer-events: none;
+    opacity: 0;
+}
+
+.zip-form .form-group{
+    font-size: 16px;
+}
+
+.zipcode-input {
+    margin-right: 10px!important;
+}
+
+.form-group * {
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
+    border: 0!important;
+}
+
+.country-group select {
+    border-radius: 5px;
+    padding: 4px;
+    outline: 1px solid var(--purple-main-1);
+}
+
+.country-group select:hover,
+.country-group select:active,
+.country-group select:focus,
+.country-group select:focus-visible {
+    outline: 2px solid var(--purple-main-1);
+}
+
+.zip-group input {
+    border-radius: 5px;
+    padding: 4px;
+    outline: 1px solid var(--purple-main-1);
+    height: 2em;
+}
+
+.zip-group input:hover,
+.zip-group input:active,
+.zip-group input:focus {
+    outline: 2px solid var(--purple-main-1);
+}
+
+.zip-group button {
+    border-radius: 15px;
+    padding: 0 6px;
+    background-color: var(--lavender-main-1);
+    outline: 1px solid var(--purple-main-1);
+}
+
+.zip-group button:hover {
+    filter: brightness(110%);
+    outline: 2px solid var(--purple-main-1);
+}
+
+.top-bar.showing .search-button svg {
+    fill: var(--lavender-main-1);
+}
+.top-bar .search-button svg:hover {
+    fill: white;
+}    

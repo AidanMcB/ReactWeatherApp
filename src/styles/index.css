@@ -1,0 +1,71 @@
+@import './CurrentWeather.css';
+@import './Forecast.css';
+@import './TopBar.css';
+@import './WeatherModal.css';
+@import './Mobile.css';
+
+* {
+    box-sizing: border-box;
+    font-size: 28px;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+:root {
+    --dark-blue-1: #007bff;
+    --container-bg: rgba(0,0,0,0.20);
+
+    /* Main Color Palette */
+    --purple-main-1: #b45dbb;
+    --gray-main-1: #4B5358;
+    --gray-main-2: #727072;
+    --rose-main-1: #AF929D;
+    --lavender-main-1: #d1d5f0;
+    --lavender-main-2: rgba(186, 191, 221, 0.85);
+}
+
+html, body, #root, .App-wrapper {
+    height: 100%
+}
+
+.App {
+    display: grid;
+    padding: 2em;
+}
+
+.error-message-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.error-message {
+    color: red;
+    font-size: 18px;
+    font-style: italic;
+    background-color: #ffffff69;
+    padding: 1em;
+    outline: 1px solid var(--purple-main-1);
+    border-radius: 15px;
+    margin: 0;
+}
+/* flex */
+.flex--full-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    cursor: pointer;
+}

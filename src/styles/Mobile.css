@@ -1,0 +1,123 @@
+/* 320px — 480px: Mobile devices */
+@media screen and (max-width: 768px) {
+    .App {
+        width: 100%;
+        padding: 0!important;
+        overflow: hidden;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        box-sizing: border-box;
+    }
+
+    .top-bar.showing .zip-form {
+        top: 48px;
+        height: 18vh;
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+    }
+
+    .zip-form--content {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .top-bar .zip-form--content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .search-button {
+        padding: 0 12px 0 0;
+    }
+
+    .zip-form .country-group {
+        text-align: center;
+    }
+
+    .zip-form .country-group select {
+        width: 80%;
+    }
+
+    .top-bar.hidden .zip-form {
+        top: 48px;
+        height: 18vh;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        transition: 1s;
+    }
+
+    /* Forecast */
+    .forecast-wrapper {
+        padding: 0;
+    }
+
+    .current-day-wrapper {
+        font-size: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .current-day-wrapper > * {
+        width: 100%;
+        align-self: flex-center;
+    }
+
+    .today, .hi-low {
+        margin: 0
+    }
+
+    .weekly-forecast-wheel {
+        height: 40vh;
+    }
+
+    /* Current Weather */
+    .day-card {
+        font-size: 24px;
+    }
+
+    /* Weather Modal */
+    .weather-modal {
+        padding: .5em;
+        width: 80vw;
+    }
+
+    /* Error Message */
+    .error-message-container {
+        bottom: 0;
+        padding: 12px;
+
+    }
+
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    /* Forecast */
+    .forecast-wrapper {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .weekly-forecast-wrapper {
+        align-items: center;
+    }
+
+    .current-day-wrapper .city {
+        align-self: flex-end;
+    }
+
+    .current-day-wrapper .today, 
+    .current-day-wrapper .hi-low {
+        align-self: flex-start;
+    }
+
+    /* Weather Modal */
+    .weather-modal {
+        width: 80vw;
+    }
+}

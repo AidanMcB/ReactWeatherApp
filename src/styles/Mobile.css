@@ -16,6 +16,7 @@
         height: 18vh;
         background: rgba(0,0,0,0.7);
         position: absolute;
+        height: calc(100vh - 48px);
     }
 
     .zip-form--content {
@@ -27,6 +28,8 @@
         height: 100%;
         display: flex;
         justify-content: center;
+        height: 15%;
+        margin-top: 40%;
     }
 
     .search-button {
@@ -39,6 +42,11 @@
 
     .zip-form .country-group select {
         width: 80%;
+        font-size: 28px;
+    }
+
+    .zip-form .zipcode-input {
+        font-size: 18px;
     }
 
     .top-bar.hidden .zip-form {
@@ -86,11 +94,18 @@
         width: 80vw;
     }
 
+    .modal--temp {
+        font-size: 2em;
+    }
+
     /* Error Message */
     .error-message-container {
         bottom: 0;
         padding: 12px;
+    }
 
+    .error-message {
+        border-radius: 15px!important;
     }
 
 }
@@ -120,4 +135,5 @@
     .weather-modal {
         width: 80vw;
     }
+
 }

@@ -34,6 +34,8 @@ export default function Forecast(props) {
         setActiveDay(dayOfTheWeek);
         setModalOpen(true);
     }
+
+    const sevenDays = forecast.daily.slice(0,7);
   
     return (
         <div className="forecast-wrapper">
@@ -41,7 +43,7 @@ export default function Forecast(props) {
             <WeatherModal activeDay={activeDay} predictiveData={forecast.daily[getKeyByValue(daysOfTheWeek, activeDay)]} isActive={isModalOpen} closeModal={() => setModalOpen(false)} />
             <div className="weekly-forecast-wrapper">
                 <div className="weekly-forecast-wheel">
-                    { forecast.daily.map((day) => (
+                    { sevenDays.map((day) => (
                         <DayCard day={day} 
                             activeDay={activeDay} 
                             selectDay={handleDaySelect}

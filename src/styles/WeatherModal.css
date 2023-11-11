@@ -10,12 +10,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9;
-    transition: 3s;
+    transition: 2s;
 }
 
 .weather-modal-wrapper:not(.active) .weather-modal {
@@ -24,7 +24,6 @@
 
 .weather-modal {
     background-color: var(--lavender-main-1);
-    outline: 1px solid var(--purple-main-1);
     border-radius: 20px;
     padding: 2em;
     font-size: 1.2em;
@@ -32,6 +31,7 @@
     opacity: 1;
     transition: 1s;
     width: 60vw;
+    color: var(--text-color);
 }
 
 .modal--close-button {
@@ -40,7 +40,7 @@
     top: 16px;
     border: none;
     background-color: rgba(0,0,0,0);
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .modal--close-button:hover {
@@ -70,6 +70,11 @@
 .modal--main {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.modal--icon {
+    margin-left: 1em;
 }
 
 .modal--temp {

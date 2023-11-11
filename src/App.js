@@ -7,6 +7,7 @@ import './App.css';
 //Components
 import Forecast from './components/Forecast';
 import TopBar from './components/TopBar';
+import Map from './components/Map.js';
 import { _getWeatherByLatAndLon, _getCoordinatesByZipAndCountry } from './services';
 
 function App() {
@@ -94,7 +95,10 @@ function App() {
             <div className="App">
                 { forecast && locationData &&
                     <Forecast forecast={forecast} locationData={locationData} />
-                }     
+                }
+                { locationData &&
+                <   Map lat={locationData.lat} lon={locationData.lon} />
+                }
             </div>
         </div>
     );

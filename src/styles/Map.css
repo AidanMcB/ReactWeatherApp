@@ -1,0 +1,13 @@
+.map-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.map-marker {
+    height: 16px;
+    width: 16px;
+    color: black;
+    background-color: rgba(255, 0, 0, 0.806);
+    z-index: 999999;
+    position: absolute;
+}

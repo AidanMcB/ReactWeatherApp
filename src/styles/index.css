@@ -2,12 +2,14 @@
 @import './Forecast.css';
 @import './TopBar.css';
 @import './WeatherModal.css';
+@import './Map.css';
 @import './Mobile.css';
 
 * {
     box-sizing: border-box;
     font-size: 28px;
 }
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

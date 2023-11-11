@@ -1,5 +1,6 @@
 .current-day-wrapper {
     text-align: center;
+    color: var(--text-color);
 }
 
 .city {

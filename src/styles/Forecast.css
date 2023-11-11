@@ -15,7 +15,6 @@
     overflow: scroll;
     border-radius: 25px;
     outline: .5px solid black;
-    box-shadow: 4px 4px 4px gray;
 }
 
 .day-card {

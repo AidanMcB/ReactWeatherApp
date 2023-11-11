@@ -18,7 +18,7 @@
     transition: .3s;
 }
 
-svg {
+.search-button svg {
     height: 20px;
 }
 
@@ -68,39 +68,23 @@ svg:hover {
 .country-group select {
     border-radius: 5px;
     padding: 4px;
-    outline: 1px solid var(--purple-main-1);
-}
-
-.country-group select:hover,
-.country-group select:active,
-.country-group select:focus,
-.country-group select:focus-visible {
-    outline: 2px solid var(--purple-main-1);
 }
 
 .zip-group input {
     border-radius: 5px;
     padding: 4px;
-    outline: 1px solid var(--purple-main-1);
     height: 2em;
-}
-
-.zip-group input:hover,
-.zip-group input:active,
-.zip-group input:focus {
-    outline: 2px solid var(--purple-main-1);
 }
 
 .zip-group button {
     border-radius: 15px;
     padding: 0 6px;
     background-color: var(--lavender-main-1);
-    outline: 1px solid var(--purple-main-1);
+    color: var(--text-color);
 }
 
 .zip-group button:hover {
     filter: brightness(110%);
-    outline: 2px solid var(--purple-main-1);
 }
 
 .top-bar.showing .search-button svg {
